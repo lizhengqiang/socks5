@@ -10,8 +10,8 @@ func main() {
 	// Create a SOCKS5 server
 	conf := &socks5.Config{
 	}
-	if (os.Getenv("AUTH_USERNAME")) {
-		c := &socks5.StaticCredentials{}
+	if (os.Getenv("AUTH_USERNAME") != "") {
+		c := socks5.StaticCredentials{}
 		c[os.Getenv("AUTH_USERNAME")] = os.Getenv("AUTH_PASSWORD")
 		conf = &socks5.Config{
 			Credentials:c,
