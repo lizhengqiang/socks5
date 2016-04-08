@@ -6,6 +6,6 @@ RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && go get \
     && go build
 
-EXPOSE 8080
+EXPOSE 1080
 
 CMD ["./socks5"]
